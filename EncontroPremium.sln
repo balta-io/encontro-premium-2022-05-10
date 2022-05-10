@@ -1,25 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32427.441
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncontroPremium.Api", "EncontroPremium.Api\EncontroPremium.Api.csproj", "{92BC9028-B776-472C-A6B0-D1DD1D037C60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncontroPremium.Api", "EncontroPremium.Api\EncontroPremium.Api.csproj", "{92BC9028-B776-472C-A6B0-D1DD1D037C60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncontroPremium.Core", "EncontroPremium.Core\EncontroPremium.Core.csproj", "{3AA86764-E907-4097-9E32-5E9606313F1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncontroPremium.Core", "EncontroPremium.Core\EncontroPremium.Core.csproj", "{3AA86764-E907-4097-9E32-5E9606313F1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncontroPremium.Web", "EncontroPremium.Web\EncontroPremium.Web.csproj", "{6A2DFB53-CF82-4FDC-8B22-31220F9769D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncontroPremium.Web", "EncontroPremium.Web\EncontroPremium.Web.csproj", "{6A2DFB53-CF82-4FDC-8B22-31220F9769D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncontroPremium.Components", "EncontroPremium.Components\EncontroPremium.Components.csproj", "{68EF959B-0341-4EBD-ADCD-A59D958FBF60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncontroPremium.Components", "EncontroPremium.Components\EncontroPremium.Components.csproj", "{68EF959B-0341-4EBD-ADCD-A59D958FBF60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncontroPremium.Pwa", "EncontroPremium.Pwa\EncontroPremium.Pwa.csproj", "{22B781D9-7E60-4B90-9418-38CDBAB2DA85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncontroPremium.Pwa", "EncontroPremium.Pwa\EncontroPremium.Pwa.csproj", "{22B781D9-7E60-4B90-9418-38CDBAB2DA85}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncontroPremium.Mobile", "EncontroPremium.Mobile\EncontroPremium.Mobile.csproj", "{DC35D946-636A-42D0-A1D9-293F98D633CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncontroPremium.Hybrid", "EncontroPremium.Hybrid\EncontroPremium.Hybrid.csproj", "{46E6D31C-9963-4470-A389-EFF413797F52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{92BC9028-B776-472C-A6B0-D1DD1D037C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +43,23 @@ Global
 		{22B781D9-7E60-4B90-9418-38CDBAB2DA85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22B781D9-7E60-4B90-9418-38CDBAB2DA85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22B781D9-7E60-4B90-9418-38CDBAB2DA85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC35D946-636A-42D0-A1D9-293F98D633CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC35D946-636A-42D0-A1D9-293F98D633CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC35D946-636A-42D0-A1D9-293F98D633CF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DC35D946-636A-42D0-A1D9-293F98D633CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC35D946-636A-42D0-A1D9-293F98D633CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC35D946-636A-42D0-A1D9-293F98D633CF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{46E6D31C-9963-4470-A389-EFF413797F52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E6D31C-9963-4470-A389-EFF413797F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E6D31C-9963-4470-A389-EFF413797F52}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{46E6D31C-9963-4470-A389-EFF413797F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E6D31C-9963-4470-A389-EFF413797F52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46E6D31C-9963-4470-A389-EFF413797F52}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB44EE73-0FD1-414F-B40C-98AA92DEF514}
 	EndGlobalSection
 EndGlobal
