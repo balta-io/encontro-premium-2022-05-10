@@ -1,0 +1,206 @@
+#app, body, html {
+    font-family: Poppins, sans-serif;
+    background-color: #fffbf7;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    height: 100%
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%
+}
+
+.content h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.password-placeholder {
+    border: 1px dashed #281ac8;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 36px;
+    padding: 12px 24px 12px 24px
+}
+
+input {
+    text-align: center;
+    outline: 0;
+    background-color: transparent
+}
+
+input:focus {
+    outline: 0;
+    background-color: transparent
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    line-height: 22px;
+    text-align: center;
+    background: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
+    border-radius: 5px;
+    padding: 12px 32px 12px 32px
+}
+
+button:active {
+    background: linear-gradient(178.18deg, #fd749b -22.56%, #281ac8 158.3%);
+    transform: translateY(2px)
+}
+
+.button-link {
+    cursor: pointer;
+    border: none;
+    font-weight: 400;
+    font-size: 15px;
+    color: #333;
+    background: 0 0;
+    padding: 12px 24px 12px 24px;
+    text-decoration: none;
+}
+
+.button-link:active {
+    cursor: pointer;
+    border: none;
+    font-weight: 400;
+    font-size: 15px;
+    color: #333;
+    background: 0 0;
+    padding: 12px 24px 12px 24px
+}
+
+.password-type {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center
+}
+
+.password-type button {
+    cursor: pointer;
+    border: none;
+    color: #333;
+    background: 0 0;
+    width: 100px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 700;
+    border-top: 2px solid #333;
+    border-radius: 1px;
+    margin: 2px
+}
+
+.weak {
+    border-top: 4px solid #ffd046 !important;
+    border-radius: 1px
+}
+
+.medium {
+    border-top: 4px solid #ef3054 !important;
+    border-radius: 1px
+}
+
+.strong {
+    border-top: 4px solid #0fe133 !important;
+    border-radius: 1px
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein .5s, fadeout .5s 2.5s;
+    animation: fadein .5s, fadeout .5s 2.5s
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0
+    }
+    to {
+        bottom: 30px;
+        opacity: 1
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0
+    }
+    to {
+        bottom: 30px;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1
+    }
+    to {
+        bottom: 0;
+        opacity: 0
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1
+    }
+    to {
+        bottom: 0;
+        opacity: 0
+    }
+}
+
+#blazor-error-ui {
+    display: none;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px
+}

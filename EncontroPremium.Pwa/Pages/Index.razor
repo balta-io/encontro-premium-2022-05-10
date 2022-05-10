@@ -1,0 +1,45 @@
+﻿@page "/"
+@inject IJSRuntime Js
+
+<div class="content">
+    <img src="img/illustration.svg" alt="Senha Forte">
+    <h1>Vamos gerar uma<br>nova senha segura?</h1>
+    <input id="password" class="password-placeholder" @bind="Password" readonly/>
+    <br>
+    <div class="password-type">
+        <button id="weak" class="@((Size == 8 ? "weak" : ""))" @onclick="@(x => SetSize(8))">Fraca</button>
+        <button id="medium" class="@((Size == 16 ? "medium" : ""))" @onclick="@(x => SetSize(16))">Média</button>
+        <button id="strong" class="@((Size == 24 ? "strong" : ""))" @onclick="@(x => SetSize(24))">Forte</button>
+    </div>
+    <br>
+    <button @onclick="Generate">GERAR</button>
+    <button id="copy-button" class="button-link" @onclick="CopyToClipboard">
+        Copiar
+    </button>
+</div>
+
+<div id="snackbar">Senha copiada para área de transferência</div>
+
+@code
+{
+    private short Size { get; set; } = 24;
+    private string Password { get; set; } = string.Empty;
+
+    private void Generate() => Password = PasswordGenerator.Generate(Size);
+
+    private void SetSize(short size)
+    {
+        Size = size;
+        Generate();
+    }
+
+    private async Task CopyToClipboard()
+    {
+        await Js.InvokeVoidAsync("copyToClipboard");
+        await ShowSnackBar();
+    }
+
+    private async Task ShowSnackBar() => await Js.InvokeVoidAsync("showSnackBar");
+
+    protected override void OnInitialized() => Password = PasswordGenerator.Generate(Size);
+}

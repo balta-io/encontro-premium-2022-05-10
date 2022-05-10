@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>EncontroPremium.Pwa</title>
+    <base href="/"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="manifest.json" rel="manifest"/>
+
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icon.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/icon.png">
+
+    <!-- coloque isso dentro de `head` -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="img/icon.png" sizes="2048x2732" rel="apple-touch-startup-image"/>
+    <link href="img/icon.png" sizes="1668x2224" rel="apple-touch-startup-image"/>
+    <link href="img/icon.png" sizes="1536x2048" rel="apple-touch-startup-image"/>
+    <link href="img/icon.png" sizes="1125x2436" rel="apple-touch-startup-image"/>
+    <link href="img/icon.png" sizes="1242x2208" rel="apple-touch-startup-image"/>
+    <link href="img/icon.png" sizes="750x1334" rel="apple-touch-startup-image"/>
+    <link href="img/icon.png" sizes="640x1136" rel="apple-touch-startup-image"/>
+
+    <link rel="icon" type="image/png" href="img/icon.png"/>
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+<div id="app">
+    <p class="text-center">
+        <strong>Carregando...</strong>
+    </p>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+<script src="_framework/blazor.webassembly.js"></script>
+<script>navigator.serviceWorker.register('service-worker.js');</script>
+
+<script>
+    window.copyToClipboard = () => {
+        var copyText = document.getElementById("password");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+        document.execCommand("copy");
+    };
+
+    window.showSnackBar = () => {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function () {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    }
+
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+    if (isIos() && !isInStandaloneMode()) {
+        this.setState({showInstallMessage: true});
+    }
+</script>
+</body>
+
+</html>

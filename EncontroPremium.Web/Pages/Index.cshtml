@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="content">
+    <img src="img/illustration.svg" alt="Senha Forte">
+    <h1>Vamos gerar uma<br>nova senha segura?</h1>
+    <input id="password" class="password-placeholder" value="@Model.Password" readonly/>
+    <br>
+    <div class="password-type">
+        <a href="?len=8&specialChars=@Model.SpecialChars&upperCase=@Model.UpperCase" id="weak" class="button-link @((Model.Len == 8 ? "weak" : ""))">Fraca</a>
+        <a href="?len=16&specialChars=@Model.SpecialChars&upperCase=@Model.UpperCase" id="medium" class="button-link @((Model.Len == 16 ? "medium" : ""))">Média</a>
+        <a href="?len=24&specialChars=@Model.SpecialChars&upperCase=@Model.UpperCase" id="strong" class="button-link @((Model.Len == 24 ? "strong" : ""))">Forte</a>
+    </div>
+    <br>
+    <button id="copy-button" class="button-link" onclick="copyToClipboard()">
+        Copiar
+    </button>
+</div>
+
+<div id="snackbar">Senha copiada para área de transferência</div>
